@@ -5,7 +5,8 @@ import os
 import sqlite3
 
 # ---------------- GROQ CONFIG ---------------- #
-client = Groq(api_key="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")
+client = Groq(api_key="GROQ_API_KEY")
+
 
 # ---------------- APP CONFIG ---------------- #
 app = Flask(__name__)
