@@ -1,0 +1,4 @@
+SELECT * FROM users;
+
+INSERT INTO users (username, password) VALUES ('admin', '1234');
+.exit

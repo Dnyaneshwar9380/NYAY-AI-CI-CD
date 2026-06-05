@@ -5,8 +5,7 @@ import os
 import sqlite3
 
 # ---------------- GROQ CONFIG ---------------- #
-client = Groq(api_key="GROQ_API_KEY")
-
+client = Groq(api_key="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")
 
 # ---------------- APP CONFIG ---------------- #
 app = Flask(__name__)
@@ -70,6 +69,13 @@ def signup():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
+        confirm_password = request.form.get("confirm_password")
+
+        print("USERNAME:", username)
+        print("PASSWORD:", password)
+
+        if password != confirm_password:
+            return render_template("signup.html", error="Passwords do not match")
 
         conn = sqlite3.connect("users.db")
         cur = conn.cursor()
@@ -77,8 +83,9 @@ def signup():
         try:
             cur.execute("INSERT INTO users (username,password) VALUES (?,?)",(username,password))
             conn.commit()
-        except:
-            return render_template("signup.html", error="User already exists")
+        except Exception as e:
+            print("🔥 ERROR:", e)
+            return render_template("signup.html", error=str(e))
 
         conn.close()
 
@@ -145,4 +152,4 @@ def get_response():
 
 # ---------------- RUN APP ---------------- #
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
