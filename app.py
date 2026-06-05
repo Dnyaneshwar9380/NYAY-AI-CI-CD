@@ -3,9 +3,7 @@ from functools import wraps
 from groq import Groq
 import os
 import sqlite3
-from dotenv import load_dotenv   
 
-load_dotenv()
 
 # ---------------- GROQ CONFIG ---------------- #
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
