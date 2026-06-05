@@ -3,10 +3,12 @@ from functools import wraps
 from groq import Groq
 import os
 import sqlite3
+from dotenv import load_dotenv   
+
+load_dotenv()
 
 # ---------------- GROQ CONFIG ---------------- #
-client = Groq(api_key="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")
-
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 # ---------------- APP CONFIG ---------------- #
 app = Flask(__name__)
 app.secret_key = "change-this-secret"
