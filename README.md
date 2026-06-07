@@ -1,98 +1,40 @@
 # ⚖️ Nyay AI - End-to-End CI/CD Deployment
 
-Nyay AI is an AI-powered Indian Legal Assistant that provides legal guidance, explains IPC sections, summarizes landmark judgments, and answers law-related queries through a simple web interface.
+📘 Nyay-AI: Personal AI Legal Advisor Nyay-AI is an intelligent \*\*AI-powered legal assistant\*\* built using \*\*Flask\*\* and \*\*LLaMA\*\*. It is designed to help users understand Indian law by answering queries, explaining legal concepts, and guiding them toward the right resources. --- ## ✨ Features \* 🧑‍⚖️ \*\*AI-powered Legal Q\\\&A\*\* – Ask legal questions and get instant AI-based responses. \* 📜 \*\*Indian Law Focused\*\* – Tailored knowledge for Indian legal context. \* ⚡ \*\*Fast \& Lightweight\*\* – Powered by Flask for quick responses. \* 🎨 \*\*User-friendly UI\*\* – Simple HTML interface for easy access. \* 🖼️ \*\*Screenshots included\*\* – Visual demo of the app. --- ## 🚀 Tech Stack \* \*\*Backend:\*\* Flask (Python) \* \*\*AI Model:\*\* LLaMA (or compatible LLM) \* \*\*Frontend:\*\* HTML, CSS (basic templates) \* \*\*Deployment Ready:\*\* Configured with requirements.txt and runtime.txt --- ## 🔧 Installation \& Setup 1. \*\*Clone the Repository\*\*
 
-This project demonstrates a complete DevOps workflow using GitHub Actions, Docker, Docker Hub, and AWS EC2 for automated deployment.
+bash
 
----
+&nbsp;  git clone https://github.com/Dnyaneshwar9380/Nyay-AI.git
 
-## 🚀 Features
+&nbsp;  cd Nyay-AI
 
-- AI-powered legal assistance
-- Interactive web interface
-- Dockerized application
-- Automated CI/CD pipeline
-- Docker Hub integration
-- AWS EC2 deployment
-- GitHub Actions automation
+2\. \*\*Create a Virtual Environment\*\* (recommended)
 
----
+bash
 
-## 🛠️ Tech Stack
+&nbsp;  python -m venv venv
 
-### Backend
-- Python
-- Flask
+&nbsp;  venv\\Scripts\\activate   # On Windows
 
-### AI Integration
-- Groq API
+&nbsp;  source venv/bin/activate  # On Linux/Mac
 
-### DevOps
-- Docker
-- Docker Hub
-- GitHub Actions
-- AWS EC2
+3\. \*\*Install Dependencies\*\*
 
-### Version Control
-- Git
-- GitHub
----
+bash
 
-## 📂 Project Structure
+&nbsp;  pip install -r requirements.txt
 
-NYAY-AI-CI-CD
-│
-├── .github/
-│   └── workflows/
-│       └── cicd.yml
-│
-├── templates/
-├── screenshots/
-│
-├── Dockerfile
-├── app.py
-├── requirements.txt
-├── Questions.txt
-├── .gitignore
-├── LICENSE
-└── README.md
+4\. \*\*Run the App\*\*
 
-## 📈 CI/CD Architecture
+bash
 
-Developer
-    │
-    ▼
-GitHub Repository
-    │
-    ▼
-GitHub Actions
-    │
-    ├── Continuous Integration
-    ├── Build Docker Image
-    ├── Push to Docker Hub
-    │
-    ▼
-Docker Hub
-    │
-    ▼
-AWS EC2
-    │
-    ▼
-Docker Container
-    │
-    ▼
-Nyay AI Application
+&nbsp;  python app.py
+
+5\. Open in browser: 👉 http://127.0.0.1:5000/ --- ## 📸 Screenshots !\[App Screenshot](./screenshots/1.png) !\[Logo](./screenshots/logo.png) --- ## 🛠️ Future Improvements \* Expand knowledge base beyond Indian law. \* Add chatbot UI for better interactions. \* Integrate with legal document databases. \* Multi-language support (Hindi + English). --- ## 📄 License This project is licensed under the MIT License – see the \[LICENSE](./LICENSE) file for details.
 
 
-## 🎯 Project Highlights
 
-- End-to-End CI/CD Pipeline
-- Dockerized Deployment
-- Automated GitHub Actions Workflow
-- AWS EC2 Hosting
-- Docker Hub Integration
-- AI-Powered Legal Assistant
-- Production-Ready DevOps Workflow
+
 
 
 ## 👨‍💻 Author
@@ -102,6 +44,3 @@ Nyay AI Application
 AWS | Docker | GitHub Actions | Python | Linux | Devops 
 
 
-## 📄 License
-
-This project is licensed under the Apache 2.0 License.
