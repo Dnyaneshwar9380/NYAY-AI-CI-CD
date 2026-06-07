@@ -36,12 +36,10 @@ This project demonstrates a complete DevOps workflow using GitHub Actions, Docke
 ### Version Control
 - Git
 - GitHub
-
 ---
 
 ## 📂 Project Structure
 
-```text
 NYAY-AI-CI-CD
 │
 ├── .github/
@@ -58,131 +56,9 @@ NYAY-AI-CI-CD
 ├── .gitignore
 ├── LICENSE
 └── README.md
-```
-
----
-
-## ⚙️ CI/CD Workflow
-
-The CI/CD pipeline is triggered automatically whenever code is pushed to GitHub.
-
-### Pipeline Stages
-
-1. Continuous Integration
-   - Checkout source code
-   - Install dependencies
-   - Validate application
-
-2. Build & Push Docker Image
-   - Build Docker image
-   - Push image to Docker Hub
-
-3. Deploy to AWS EC2
-   - Connect to EC2 using SSH
-   - Pull latest Docker image
-   - Stop old container
-   - Deploy updated container
-
----
-
-## 🐳 Docker Commands
-
-### Build Image
-
-```bash
-docker build -t nyay-ai .
-```
-
-### Run Container
-
-```bash
-docker run -p 5000:5000 nyay-ai
-```
-
-### Push Image
-
-```bash
-docker push dnyaneshwar9380/nyay-ai-cicd:latest
-```
-
----
-
-## ☁️ AWS EC2 Deployment
-
-### Security Group Configuration
-
-| Port | Purpose |
-|------|----------|
-| 22 | SSH |
-| 80 | HTTP |
-| 5000 | Application |
-
-## 🔐 GitHub Secrets
-
-Configure the following secrets in:
-
-Repository → Settings → Secrets and Variables → Actions
-
-| Secret Name | Description |
-|------------|-------------|
-| DOCKER_USERNAME | Docker Hub Username |
-| DOCKER_PASSWORD | Docker Hub Access Token |
-| EC2_HOST | EC2 Public IP |
-| EC2_USERNAME | EC2 User |
-| EC2_SSH_KEY | Private SSH Key |
-| GROQ_API_KEY | Groq API Key |
-
----
-
-## 🖥️ Local Setup
-
-### Clone Repository
-
-```bash
-git clone https://github.com/Dnyaneshwar9380/NYAY-AI-CI-CD.git
-
-cd NYAY-AI-CI-CD
-```
-
-### Create Virtual Environment
-
-```bash
-python -m venv venv
-
-source venv/bin/activate
-```
-
-### Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Configure Environment Variables
-
-Create a `.env` file:
-
-```env
-GROQ_API_KEY=your_groq_api_key
-```
-
-### Run Application
-
-```bash
-python app.py
-```
-
-Open in browser:
-
-```text
-http://localhost:5000
-```
-
----
 
 ## 📈 CI/CD Architecture
 
-```text
 Developer
     │
     ▼
@@ -206,9 +82,7 @@ Docker Container
     │
     ▼
 Nyay AI Application
-```
 
----
 
 ## 🎯 Project Highlights
 
@@ -220,7 +94,6 @@ Nyay AI Application
 - AI-Powered Legal Assistant
 - Production-Ready DevOps Workflow
 
----
 
 ## 👨‍💻 Author
 
@@ -228,7 +101,6 @@ Nyay AI Application
 
 AWS | Docker | GitHub Actions | Python | Linux | Devops 
 
----
 
 ## 📄 License
 
