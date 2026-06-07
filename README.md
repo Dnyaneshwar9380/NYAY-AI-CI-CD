@@ -117,22 +117,6 @@ docker push dnyaneshwar9380/nyay-ai-cicd:latest
 | 80 | HTTP |
 | 5000 | Application |
 
-### Deployment Process
-
-```bash
-docker pull dnyaneshwar9380/nyay-ai-cicd:latest
-
-docker stop nyay-ai || true
-docker rm nyay-ai || true
-
-docker run -d \
--p 5000:5000 \
---name nyay-ai \
-dnyaneshwar9380/nyay-ai-cicd:latest
-```
-
----
-
 ## 🔐 GitHub Secrets
 
 Configure the following secrets in:
